@@ -1,0 +1,19 @@
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: everisvms
+
+dn: ou=staffs,dc=everisvms,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: staffs
+
+dn: uid=ismail,ou=staffs,dc=everisvms,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: ismail Rzouki
+sn: ismail
+uid: ismail
+userPassword: {SHA}fDYHuOYbzxlE6ehQOmYPIfS28/E=
