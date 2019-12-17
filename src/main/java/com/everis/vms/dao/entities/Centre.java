@@ -1,12 +1,12 @@
 package com.everis.vms.dao.entities;
 
-import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,22 +16,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Employee {
-	
+public class Centre {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String firstName;
-	private String lastName;
-	
-	@ManyToOne
-	private Category category;
-	private String image;
-	
-	@ManyToOne
-	private Centre centre;
-	private Date everisHiringDate;
-	private int vacationDays;
-	private boolean status;
+	private String name;
+
+	@OneToMany(mappedBy = "centre")
+	private List<Employee> employees;
 
 }
