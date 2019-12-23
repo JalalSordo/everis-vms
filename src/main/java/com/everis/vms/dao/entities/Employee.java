@@ -35,7 +35,7 @@ public class Employee {
 	@ManyToOne
 	private Centre centre;
 	
-	private Date everisHiringDate;
+	private Date hiringDate;
 	private int vacationDays;
 	private boolean status;
 	
